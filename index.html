@@ -84,6 +84,141 @@
   }
   nav a:hover{ color:var(--text); }
 
+  .header-actions{ display:flex; align-items:center; gap:14px; }
+
+  /* CATEGORY DROPDOWN (desktop) */
+  .nav-dropdown{ position:relative; }
+  .nav-dropdown-btn{
+    background:none; border:none;
+    font-family:var(--font-body);
+    font-size:14.5px; color:var(--muted);
+    display:flex; align-items:center; gap:6px;
+    padding:0;
+  }
+  .nav-dropdown-btn:hover, .nav-dropdown.open .nav-dropdown-btn{ color:var(--text); }
+  .nav-dropdown .chev{ font-size:11px; transition:transform .2s; }
+  .nav-dropdown.open .chev{ transform:rotate(180deg); }
+
+  .dropdown-panel{
+    position:absolute; top:calc(100% + 16px); inset-inline-start:50%;
+    transform:translateX(50%);
+    background:var(--surface-2);
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:20px;
+    display:none;
+    gap:32px;
+    min-width:340px;
+    box-shadow:0 12px 32px rgba(0,0,0,0.35);
+    z-index:50;
+  }
+  [dir="rtl"] .dropdown-panel{ transform:translateX(-50%); }
+  .nav-dropdown.open .dropdown-panel{ display:flex; }
+  .dropdown-col{ display:flex; flex-direction:column; gap:4px; min-width:140px; }
+  .dropdown-title{
+    font-family:var(--font-mono);
+    font-size:11px; color:var(--gold);
+    letter-spacing:1px;
+    margin-bottom:8px;
+  }
+  .dropdown-col a{
+    font-size:14px; color:var(--text);
+    padding:6px 0;
+  }
+  .dropdown-col a:hover{ color:var(--gold); }
+
+  /* SEARCH (desktop) */
+  .search-box{
+    display:flex; align-items:center;
+    background:var(--surface-2);
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:0 6px 0 12px;
+    transition:border-color .2s;
+  }
+  .search-box:focus-within{ border-color:var(--gold); }
+  .search-box input{
+    background:none; border:none; color:var(--text);
+    font-family:inherit; font-size:13.5px;
+    padding:9px 4px; width:150px;
+    outline:none;
+  }
+  .search-box input::placeholder{ color:var(--muted); }
+  .search-btn{
+    background:none; border:none; color:var(--muted);
+    font-size:14px; padding:6px;
+  }
+
+  /* HAMBURGER (mobile) */
+  .hamburger{
+    display:none;
+    flex-direction:column; justify-content:center; gap:5px;
+    width:34px; height:34px;
+    background:var(--surface-2);
+    border:1px solid var(--line-strong);
+    border-radius:var(--radius);
+    padding:0 8px;
+  }
+  .hamburger span{
+    display:block; width:100%; height:1.5px;
+    background:var(--text);
+  }
+
+  /* MOBILE MENU PANEL */
+  .mobile-menu{
+    max-height:0; overflow:hidden;
+    background:var(--surface);
+    border-bottom:1px solid var(--line);
+    transition:max-height .3s ease;
+  }
+  .mobile-menu.open{ max-height:600px; overflow-y:auto; }
+  .mobile-search{ padding:16px 28px 0; }
+  .mobile-search input{
+    width:100%;
+    background:var(--surface-2);
+    border:1px solid var(--line-strong);
+    color:var(--text);
+    font-family:inherit; font-size:14px;
+    padding:11px 14px;
+    border-radius:var(--radius);
+    outline:none;
+  }
+  .mobile-search input:focus{ border-color:var(--gold); }
+  .mobile-link{
+    display:block;
+    padding:14px 28px;
+    font-size:14.5px; color:var(--text);
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-accordion-btn{
+    width:100%; text-align:start;
+    display:flex; align-items:center; justify-content:space-between;
+    background:none; border:none;
+    padding:14px 28px;
+    font-family:inherit; font-size:14.5px; color:var(--text);
+    border-bottom:1px solid var(--line);
+  }
+  .mobile-accordion-btn .chev{ font-size:11px; transition:transform .2s; color:var(--muted); }
+  .mobile-accordion-btn.open .chev{ transform:rotate(180deg); }
+  .mobile-accordion-panel{
+    max-height:0; overflow:hidden;
+    transition:max-height .25s ease;
+    background:rgba(255,255,255,0.02);
+  }
+  .mobile-accordion-panel.open{ max-height:500px; }
+  .mobile-group-title{
+    font-family:var(--font-mono);
+    font-size:11px; color:var(--gold);
+    letter-spacing:1px;
+    padding:12px 28px 4px;
+  }
+  .mobile-sublink{
+    display:block;
+    padding:10px 28px 10px 40px;
+    font-size:13.5px; color:var(--muted);
+    border-bottom:1px solid var(--line);
+  }
+
   .cart-btn{
     position:relative;
     background:var(--surface-2);
@@ -457,6 +592,8 @@
 
   @media (max-width:640px){
     nav{ display:none; }
+    .search-box{ display:none; }
+    .hamburger{ display:flex; }
     .header-inner{ padding:14px 0; }
     .hero{ padding:56px 0 44px; }
     .section{ padding:44px 0; }
@@ -468,18 +605,74 @@
 <header>
   <div class="wrap header-inner">
     <div class="logo"><span class="logo-mark">AL</span> Arialap</div>
+
     <nav>
-      <a href="#products">محصولات</a>
-      <a href="#courses">دوره‌ها</a>
-      <a href="#faq">راهنما</a>
+      <a href="#home">صفحه اصلی</a>
+      <a href="#products">لپ‌تاپ</a>
+      <div class="nav-dropdown" id="navDropdown">
+        <button class="nav-dropdown-btn" id="navDropdownBtn">دسته‌بندی کالاها <span class="chev">˅</span></button>
+        <div class="dropdown-panel">
+          <div class="dropdown-col">
+            <div class="dropdown-title">کالای دیجیتال</div>
+            <a href="#products">لپ‌تاپ</a>
+            <a href="#products">مانیتور</a>
+            <a href="#products">پرینتر</a>
+            <a href="#products">سیستم یکپارچه</a>
+            <a href="#products">کیس</a>
+          </div>
+          <div class="dropdown-col">
+            <div class="dropdown-title">لوازم جانبی</div>
+            <a href="#products">موس</a>
+            <a href="#products">کیبرد</a>
+            <a href="#products">هدست</a>
+            <a href="#products">دسته بازی</a>
+            <a href="#products">خنک‌کننده لپ‌تاپ</a>
+          </div>
+        </div>
+      </div>
+      <a href="tel:09134031578">تماس با ما</a>
     </nav>
-    <button class="cart-btn" id="cartToggle">
-      سبد خرید <span class="cart-count" id="cartCount">0</span>
-    </button>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="جستجوی محصول...">
+        <button class="search-btn" aria-label="جستجو">🔍</button>
+      </div>
+      <button class="cart-btn" id="cartToggle">
+        سبد خرید <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburgerBtn" aria-label="باز کردن منو">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-search">
+      <input type="text" id="mobileSearchInput" placeholder="جستجوی محصول...">
+    </div>
+    <a href="#home" class="mobile-link">صفحه اصلی</a>
+    <a href="#products" class="mobile-link">لپ‌تاپ</a>
+    <button class="mobile-accordion-btn" id="mobileCatBtn">دسته‌بندی کالاها <span class="chev">˅</span></button>
+    <div class="mobile-accordion-panel" id="mobileCatPanel">
+      <div class="mobile-group-title">کالای دیجیتال</div>
+      <a href="#products" class="mobile-sublink">لپ‌تاپ</a>
+      <a href="#products" class="mobile-sublink">مانیتور</a>
+      <a href="#products" class="mobile-sublink">پرینتر</a>
+      <a href="#products" class="mobile-sublink">سیستم یکپارچه</a>
+      <a href="#products" class="mobile-sublink">کیس</a>
+      <div class="mobile-group-title">لوازم جانبی</div>
+      <a href="#products" class="mobile-sublink">موس</a>
+      <a href="#products" class="mobile-sublink">کیبرد</a>
+      <a href="#products" class="mobile-sublink">هدست</a>
+      <a href="#products" class="mobile-sublink">دسته بازی</a>
+      <a href="#products" class="mobile-sublink">خنک‌کننده لپ‌تاپ</a>
+    </div>
+    <a href="tel:09134031578" class="mobile-link">تماس با ما</a>
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
   <div class="wrap">
     <div class="hero-tag"><span class="rule"></span> ثبت شماره ۰۰۱ تا ۰۰۶ — محصولات فعال</div>
     <h1>هر فایلی که می‌سازید<br><em>یک ثبت دائمی</em> در فروشگاه شماست</h1>
@@ -545,12 +738,16 @@ const products = [
 const toFa = n => n.toLocaleString('fa-IR');
 let cart = {}; // id -> qty
 let currentFilter = 'all';
+let currentSearch = '';
 
 const grid = document.getElementById('productGrid');
 const resultCount = document.getElementById('resultCount');
 
 function renderGrid(){
-  const list = currentFilter === 'all' ? products : products.filter(p => p.cat === currentFilter);
+  let list = currentFilter === 'all' ? products : products.filter(p => p.cat === currentFilter);
+  if(currentSearch.trim() !== ''){
+    list = list.filter(p => p.name.includes(currentSearch.trim()) || p.desc.includes(currentSearch.trim()));
+  }
   resultCount.textContent = `${toFa(list.length)} مورد`;
   grid.innerHTML = list.map(p => `
     <div class="card">
@@ -706,6 +903,48 @@ checkoutBtn.addEventListener('click', openModal);
 
 renderGrid();
 renderCart();
+
+// CATEGORY DROPDOWN (desktop)
+const navDropdown = document.getElementById('navDropdown');
+const navDropdownBtn = document.getElementById('navDropdownBtn');
+navDropdownBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navDropdown.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if(!navDropdown.contains(e.target)) navDropdown.classList.remove('open');
+});
+
+// HAMBURGER / MOBILE MENU
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburgerBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+
+// MOBILE CATEGORY ACCORDION
+const mobileCatBtn = document.getElementById('mobileCatBtn');
+const mobileCatPanel = document.getElementById('mobileCatPanel');
+mobileCatBtn.addEventListener('click', () => {
+  mobileCatBtn.classList.toggle('open');
+  mobileCatPanel.classList.toggle('open');
+});
+
+// SEARCH (desktop + mobile, kept in sync)
+const searchInput = document.getElementById('searchInput');
+const mobileSearchInput = document.getElementById('mobileSearchInput');
+function handleSearchInput(value){
+  currentSearch = value;
+  renderGrid();
+}
+searchInput.addEventListener('input', (e) => {
+  mobileSearchInput.value = e.target.value;
+  handleSearchInput(e.target.value);
+});
+mobileSearchInput.addEventListener('input', (e) => {
+  searchInput.value = e.target.value;
+  handleSearchInput(e.target.value);
+});
 </script>
 </body>
 </html>
