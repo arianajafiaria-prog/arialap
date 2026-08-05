@@ -1,7 +1,8 @@
-<!-- =========================================
-باشگاه فوتبال - برنامه هفتگی تمرینات
+<!-- =====================================================
+ISATIS FOOTBALL CLUB
+PREMIUM WEBSITE
 PART 1 / 3
-========================================= -->
+====================================================== -->
 
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -11,543 +12,50 @@ PART 1 / 3
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-font-family:tahoma,sans-serif;
-background:#f5f5f5;
+
 direction:rtl;
+
+font-family:tahoma,sans-serif;
+
+background:#fafafa;
+
+color:#222;
+
 }
 
-.club-schedule{
+/*==========================
+HEADER
+==========================*/
+
+.isatis-header{
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+width:100%;
+
+z-index:9999;
+
+background:rgba(120,0,0,.92);
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+}
+
+.header-container{
 
 max-width:1400px;
-margin:40px auto;
-padding:35px;
-border-radius:30px;
-overflow:hidden;
-position:relative;
-
-background:
-linear-gradient(135deg,#7a0000 0%,#b30000 45%,#d60000 100%);
-
-box-shadow:0 30px 60px rgba(180,0,0,.25);
-
-}
-
-.club-schedule:before{
-
-content:"";
-
-position:absolute;
-
-width:450px;
-height:450px;
-
-background:#ff4040;
-
-filter:blur(180px);
-
-opacity:.18;
-
-top:-180px;
-left:-180px;
-
-}
-
-.club-schedule:after{
-
-content:"";
-
-position:absolute;
-
-width:350px;
-height:350px;
-
-background:#ffffff;
-
-filter:blur(180px);
-
-opacity:.08;
-
-bottom:-160px;
-right:-160px;
-
-}
-
-.schedule-header{
-
-position:relative;
-z-index:5;
-
-text-align:center;
-
-margin-bottom:40px;
-
-}
-
-.schedule-badge{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:10px;
-
-background:rgba(255,255,255,.12);
-
-padding:12px 24px;
-
-border-radius:50px;
-
-color:#fff;
-
-font-weight:bold;
-
-margin-bottom:20px;
-
-border:1px solid rgba(255,255,255,.18);
-
-}
-
-.schedule-title{
-
-font-size:48px;
-
-font-weight:800;
-
-color:#fff;
-
-line-height:1.6;
-
-margin-bottom:15px;
-
-}
-
-.schedule-title span{
-
-color:#ffd54f;
-
-}
-
-.schedule-desc{
-
-max-width:850px;
 
 margin:auto;
-
-font-size:18px;
-
-line-height:2;
-
-color:#f3f3f3;
-
-}
-
-.info-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:25px;
-
-margin-top:45px;
-
-position:relative;
-
-z-index:5;
-
-}
-
-.info-box{
-
-background:#fff;
-
-padding:28px;
-
-border-radius:22px;
-
-display:flex;
-
-align-items:center;
-
-gap:18px;
-
-transition:.35s;
-
-box-shadow:0 15px 35px rgba(0,0,0,.10);
-
-}
-
-.info-box:hover{
-
-transform:translateY(-8px);
-
-}
-
-.info-box i{
-
-font-size:42px;
-
-color:#c40000;
-
-}
-
-.info-box h3{
-
-font-size:22px;
-
-margin-bottom:8px;
-
-color:#8b0000;
-
-}
-
-.info-box p{
-
-font-size:15px;
-
-line-height:2;
-
-color:#555;
-
-}
-
-.days-title{
-
-position:relative;
-
-z-index:5;
-
-margin-top:55px;
-
-margin-bottom:25px;
-
-font-size:34px;
-
-font-weight:bold;
-
-color:#fff;
-
-text-align:center;
-
-}
-
-.schedule-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:25px;
-
-position:relative;
-
-z-index:5;
-
-}
-
-@media(max-width:900px){
-
-.club-schedule{
-
-padding:25px;
-
-}
-
-.schedule-title{
-
-font-size:32px;
-
-}
-
-.schedule-desc{
-
-font-size:15px;
-
-}
-
-.info-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.schedule-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.days-title{
-
-font-size:26px;
-
-}
-
-}
-
-</style>
-
-<section class="club-schedule">
-
-<div class="schedule-header">
-
-<div class="schedule-badge">
-
-<i class="ri-football-fill"></i>
-
-برنامه رسمی باشگاه فوتبال
-
-</div>
-
-<h1 class="schedule-title">
-
-📢 برنامه هفتگی <span>تمرینات باشگاه</span>
-
-</h1>
-
-<p class="schedule-desc">
-
-برنامه جدید تمرینات باشگاه ویژه <strong>تیر، مرداد و شهریور</strong> تا پایان فصل تابستان.
-تمامی بازیکنان لطفاً مطابق گروه سنی خود در ساعت اعلام‌شده در محل تمرین حضور داشته باشند.
-
-</p>
-
-</div>
-
-<div class="info-grid">
-
-<div class="info-box">
-
-<i class="ri-map-pin-2-fill"></i>
-
-<div>
-
-<h3>محل برگزاری</h3>
-
-<p>
-
-چمن مصنوعی ورزشگاه ملت
-<br>
-خیابان مطهری (خیابان بهداری)
-
-</p>
-
-</div>
-
-</div>
-
-<div class="info-box">
-
-<i class="ri-calendar-check-fill"></i>
-
-<div>
-
-<h3>تاریخ شروع</h3>
-
-<p>
-
-شروع تمرینات از
-<strong>شنبه ۲۰ تیر</strong>
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<h2 class="days-title">
-
-📅 برنامه هفتگی تمرینات
-
-</h2>
-
-<div class="schedule-grid">
-  <!-- ===========================
-شنبه
-=========================== -->
-
-<div class="day-card">
-
-<div class="day-header">
-
-<h2>🔴 شنبه</h2>
-
-<span>تمرینات عصر</span>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۱۵:۳۰ تا ۱۷:۰۰</b>
-
-<p>متولدین ۹۰</p>
-
-</div>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۱۷:۰۰ تا ۱۸:۳۰</b>
-
-<p>متولدین ۹۵</p>
-
-</div>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۱۸:۳۰ تا ۲۰:۰۰</b>
-
-<p>متولدین ۹۷ و ۹۸</p>
-
-</div>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۲۰:۰۰ تا ۲۱:۳۰</b>
-
-<p>متولدین ۹۶</p>
-
-</div>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۲۱:۳۰ تا ۲۳:۰۰</b>
-
-<p>متولدین ۹۳</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ===========================
-دوشنبه
-=========================== -->
-
-<div class="day-card">
-
-<div class="day-header">
-
-<h2>🔴 دوشنبه</h2>
-
-<span>تمرینات عصر</span>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۱۶:۰۰ تا ۱۷:۳۰</b>
-
-<p>متولدین ۹۲</p>
-
-</div>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۱۷:۳۰ تا ۱۹:۰۰</b>
-
-<p>متولدین ۹۶</p>
-
-</div>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۱۹:۰۰ تا ۲۰:۳۰</b>
-
-<p>متولدین ۹۳</p>
-
-</div>
-
-</div>
-
-<div class="time-item">
-
-<i class="ri-time-fill"></i>
-
-<div>
-
-<b>۲۰:۳۰ تا ۲۲:۰۰</b>
-
-<p>متولدین ۹۴</p>
-
-</div>
-
-</div>
-
-</div>
-
-<style>
-
-.day-card{
-
-background:#fff;
-
-border-radius:24px;
-
-padding:28px;
-
-box-shadow:0 18px 40px rgba(0,0,0,.10);
-
-transition:.35s;
-
-}
-
-.day-card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.day-header{
 
 display:flex;
 
@@ -555,305 +63,1072 @@ justify-content:space-between;
 
 align-items:center;
 
-margin-bottom:22px;
-
-padding-bottom:15px;
-
-border-bottom:2px solid #f1f1f1;
+padding:18px 25px;
 
 }
 
-.day-header h2{
-
-font-size:28px;
-
-color:#b30000;
-
-}
-
-.day-header span{
-
-background:#b30000;
-
-color:#fff;
-
-padding:8px 16px;
-
-border-radius:30px;
-
-font-size:13px;
-
-font-weight:bold;
-
-}
-
-.time-item{
+.logo{
 
 display:flex;
 
 align-items:center;
 
-gap:16px;
+gap:14px;
 
-padding:16px 0;
+text-decoration:none;
 
-border-bottom:1px solid #eee;
-
-}
-
-.time-item:last-child{
-
-border-bottom:none;
+color:#fff;
 
 }
 
-.time-item i{
+.logo-circle{
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+background:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#b30000;
 
 font-size:28px;
 
-color:#d60000;
+}
 
-min-width:32px;
+.logo h2{
+
+font-size:25px;
 
 }
 
-.time-item b{
-
-font-size:18px;
-
-color:#222;
+.logo span{
 
 display:block;
 
-margin-bottom:5px;
+font-size:13px;
+
+opacity:.8;
+
+margin-top:4px;
 
 }
 
-.time-item p{
+.menu{
+
+display:flex;
+
+gap:30px;
+
+align-items:center;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:#fff;
 
 font-size:15px;
 
-color:#666;
+font-weight:bold;
+
+transition:.3s;
 
 }
 
-@media(max-width:900px){
+.menu a:hover{
 
-.day-card{
-
-padding:20px;
+color:#ffd54f;
 
 }
 
-.day-header h2{
+.register-btn{
+
+background:#ffd54f;
+
+color:#7b0000;
+
+padding:14px 24px;
+
+border-radius:40px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.register-btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+/*==========================
+HERO
+==========================*/
+
+.hero{
+
+margin-top:92px;
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(135deg,#660000,#b30000,#d60000);
+
+padding:110px 40px;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+width:650px;
+
+height:650px;
+
+background:#ff3b3b;
+
+filter:blur(180px);
+
+opacity:.18;
+
+top:-240px;
+
+left:-200px;
+
+}
+
+.hero-container{
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:1.1fr .9fr;
+
+gap:60px;
+
+align-items:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+line-height:1.5;
+
+color:#fff;
+
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+color:#ffd54f;
+
+}
+
+.hero p{
+
+font-size:19px;
+
+line-height:2.2;
+
+color:#f3f3f3;
+
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.hero-buttons a{
+
+padding:16px 28px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+.btn-red{
+
+background:#fff;
+
+color:#b30000;
+
+}
+
+.btn-gold{
+
+background:#ffd54f;
+
+color:#7b0000;
+
+}
+
+.hero-buttons a:hover{
+
+transform:translateY(-6px);
+
+}
+
+.hero-image{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.hero-image img{
+
+max-width:100%;
+
+width:520px;
+
+filter:drop-shadow(0 30px 40px rgba(0,0,0,.35));
+
+animation:float 5s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+
+50%{transform:translateY(-18px);}
+
+100%{transform:translateY(0);}
+
+}
+
+/*==========================
+FEATURES
+==========================*/
+
+.features{
+
+max-width:1400px;
+
+margin:-70px auto 60px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+position:relative;
+
+z-index:5;
+
+padding:0 20px;
+
+}
+
+.feature{
+
+background:#fff;
+
+border-radius:24px;
+
+padding:30px;
+
+text-align:center;
+
+box-shadow:0 18px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.feature:hover{
+
+transform:translateY(-10px);
+
+}
+
+.feature i{
+
+font-size:48px;
+
+color:#b30000;
+
+margin-bottom:18px;
+
+}
+
+.feature h3{
+
+margin-bottom:12px;
 
 font-size:22px;
 
 }
 
-.time-item b{
+.feature p{
 
-font-size:16px;
+font-size:14px;
+
+line-height:2;
+
+color:#666;
 
 }
 
-.time-item p{
+/*==========================
+RESPONSIVE
+==========================*/
 
-font-size:14px;
+@media(max-width:1100px){
+
+.hero-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-image{
+
+margin-top:35px;
+
+}
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:80px 20px;
+
+}
+
+.hero h1{
+
+font-size:36px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+.logo h2{
+
+font-size:20px;
+
+}
+
+.logo-circle{
+
+width:48px;
+
+height:48px;
+
+}
+
+.register-btn{
+
+display:none;
 
 }
 
 }
 
 </style>
-  <!-- ===========================
-چهارشنبه
-=========================== -->
 
-<div class="day-card">
+<header class="isatis-header">
 
-<div class="day-header">
+<div class="header-container">
 
-<h2>🔴 چهارشنبه</h2>
+<a href="#" class="logo">
+
+<div class="logo-circle">
+
+<i class="ri-football-fill"></i>
+
+</div>
+
+<div>
+
+<h2>باشگاه ایساتیس</h2>
+
+<span>ISATIS FOOTBALL CLUB</span>
+
+</div>
+
+</a>
+
+<nav class="menu">
+
+<a href="#">خانه</a>
+
+<a href="#">برنامه تمرینات</a>
+
+<a href="#">اخبار</a>
+
+<a href="#">گالری</a>
+
+<a href="#">کادر فنی</a>
+
+<a href="#">تماس با ما</a>
+
+</nav>
+
+<a href="#" class="register-btn">
+
+ثبت نام در باشگاه
+
+</a>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div>
+
+<h1>
+
+آینده فوتبال را در
+<span>باشگاه ایساتیس</span>
+
+بسازید
+
+</h1>
+
+<p>
+
+آکادمی تخصصی فوتبال با مربیان مجرب، برنامه تمرینی استاندارد، زمین اختصاصی و محیطی حرفه‌ای برای رشد استعدادهای فوتبالی در تمامی رده‌های سنی.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn-gold">
+
+ثبت نام
+
+</a>
+
+<a href="#" class="btn-red">
+
+برنامه تمرینات
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/512px-Soccerball.svg.png">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+
+<i class="ri-football-fill"></i>
+
+<h3>تمرین حرفه‌ای</h3>
+
+<p>تمرینات تخصصی برای تمامی رده‌های سنی.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="ri-award-fill"></i>
+
+<h3>مربیان مجرب</h3>
+
+<p>کادر فنی دارای تجربه و دانش روز فوتبال.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="ri-team-fill"></i>
+
+<h3>رده‌های سنی</h3>
+
+<p>پذیرش بازیکنان در گروه‌های مختلف.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="ri-medal-fill"></i>
+
+<h3>مسابقات</h3>
+
+<p>حضور مستمر در لیگ‌ها و تورنمنت‌ها.</p>
+
+</div>
+
+</section>
+<!-- =====================================================
+PART 2 / 3
+TIMETABLE + TEAMS + COACHES
+====================================================== -->
+
+<style>
+
+.section-title{
+
+text-align:center;
+
+margin:80px 0 45px;
+
+}
+
+.section-title h2{
+
+font-size:42px;
+
+color:#9b0000;
+
+margin-bottom:12px;
+
+}
+
+.section-title p{
+
+font-size:17px;
+
+color:#666;
+
+}
+
+/*==========================
+TIMELINE
+==========================*/
+
+.training{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:0 20px;
+
+}
+
+.training-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:30px;
+
+}
+
+.day{
+
+background:#fff;
+
+border-radius:28px;
+
+overflow:hidden;
+
+box-shadow:0 18px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.day:hover{
+
+transform:translateY(-10px);
+
+}
+
+.day-top{
+
+background:linear-gradient(135deg,#8b0000,#d60000);
+
+padding:22px;
+
+color:#fff;
+
+text-align:center;
+
+}
+
+.day-top h3{
+
+font-size:30px;
+
+}
+
+.day-top span{
+
+opacity:.9;
+
+font-size:14px;
+
+}
+
+.item{
+
+display:flex;
+
+gap:15px;
+
+padding:18px 22px;
+
+border-bottom:1px solid #eee;
+
+align-items:center;
+
+}
+
+.item:last-child{
+
+border:none;
+
+}
+
+.time{
+
+width:95px;
+
+height:95px;
+
+border-radius:18px;
+
+background:#f6f6f6;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:bold;
+
+color:#b30000;
+
+font-size:18px;
+
+}
+
+.info h4{
+
+font-size:20px;
+
+margin-bottom:8px;
+
+}
+
+.info p{
+
+font-size:14px;
+
+color:#666;
+
+line-height:1.9;
+
+}
+
+/*==========================
+AGE GROUPS
+==========================*/
+
+.groups{
+
+max-width:1400px;
+
+margin:90px auto;
+
+padding:0 20px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+}
+
+.group{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:24px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.group:hover{
+
+transform:translateY(-10px);
+
+background:#9b0000;
+
+color:#fff;
+
+}
+
+.group:hover p{
+
+color:#f5f5f5;
+
+}
+
+.group i{
+
+font-size:55px;
+
+color:#d60000;
+
+margin-bottom:18px;
+
+}
+
+.group:hover i{
+
+color:#ffd54f;
+
+}
+
+.group h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+}
+
+.group p{
+
+color:#666;
+
+line-height:2;
+
+}
+
+/*==========================
+COACHES
+==========================*/
+
+.coaches{
+
+max-width:1400px;
+
+margin:auto;
+
+padding:20px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:28px;
+
+}
+
+.coach{
+
+background:#fff;
+
+border-radius:26px;
+
+overflow:hidden;
+
+box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+transition:.35s;
+
+text-align:center;
+
+}
+
+.coach:hover{
+
+transform:translateY(-10px);
+
+}
+
+.coach-photo{
+
+height:230px;
+
+background:linear-gradient(135deg,#8b0000,#d60000);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.coach-photo i{
+
+font-size:90px;
+
+color:#fff;
+
+}
+
+.coach-content{
+
+padding:28px;
+
+}
+
+.coach-content h3{
+
+font-size:24px;
+
+margin-bottom:10px;
+
+}
+
+.coach-content span{
+
+display:inline-block;
+
+background:#ffe7e7;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+color:#b30000;
+
+font-weight:bold;
+
+margin-bottom:15px;
+
+}
+
+.coach-content p{
+
+font-size:14px;
+
+line-height:2;
+
+color:#666;
+
+}
+
+/*==========================
+STATS
+==========================*/
+
+.stats{
+
+margin:90px auto;
+
+max-width:1400px;
+
+padding:25px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.stat{
+
+background:linear-gradient(135deg,#8b0000,#d60000);
+
+border-radius:24px;
+
+padding:40px;
+
+text-align:center;
+
+color:#fff;
+
+}
+
+.stat h2{
+
+font-size:46px;
+
+margin-bottom:10px;
+
+}
+
+.stat p{
+
+font-size:17px;
+
+}
+
+@media(max-width:900px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<!-- برنامه تمرین -->
+
+<div class="section-title">
+
+<h2>برنامه هفتگی تمرینات</h2>
+
+<p>زمان‌بندی کامل جلسات تمرینی باشگاه ایساتیس</p>
+
+</div>
+
+<section class="training">
+
+<div class="training-grid">
+
+<div class="day">
+
+<div class="day-top">
+
+<h3>شنبه</h3>
 
 <span>تمرینات عصر</span>
 
 </div>
 
-<div class="time-item">
-<i class="ri-time-fill"></i>
-<div>
-<b>۱۶:۰۰ تا ۱۷:۳۰</b>
-<p>متولدین ۹۱</p>
-</div>
-</div>
+<div class="item">
 
-<div class="time-item">
-<i class="ri-time-fill"></i>
-<div>
-<b>۱۷:۳۰ تا ۱۹:۰۰</b>
-<p>متولدین ۹۵</p>
-</div>
-</div>
+<div class="time">15:30</div>
 
-<div class="time-item">
-<i class="ri-time-fill"></i>
-<div>
-<b>۱۹:۰۰ تا ۲۰:۳۰</b>
-<p>متولدین ۹۷ و ۹۸</p>
-</div>
-</div>
+<div class="info">
 
-<div class="time-item">
-<i class="ri-time-fill"></i>
-<div>
-<b>۲۰:۳۰ تا ۲۲:۰۰</b>
-<p>متولدین ۹۴</p>
-</div>
-</div>
+<h4>متولدین ۹۰</h4>
 
-</div>
-
-<!-- ===========================
-پنجشنبه
-=========================== -->
-
-<div class="day-card">
-
-<div class="day-header">
-
-<h2>🔴 پنجشنبه</h2>
-
-<span>تمرینات صبح</span>
-
-</div>
-
-<div class="time-item">
-<i class="ri-time-fill"></i>
-<div>
-<b>۹:۰۰ تا ۱۱:۰۰</b>
-<p>متولدین ۹۲</p>
-</div>
-</div>
-
-<div class="time-item">
-<i class="ri-time-fill"></i>
-<div>
-<b>۹:۰۰ تا ۱۱:۰۰</b>
-<p>متولدین ۹۰ (چمن بزرگ ورزشگاه ملت)</p>
-</div>
-</div>
+<p>۱۵:۳۰ تا ۱۷:۰۰</p>
 
 </div>
 
 </div>
 
-<!-- ===========================
-هشدار
-=========================== -->
+<div class="item">
 
-<div style="margin-top:35px;background:#fff3cd;border-right:6px solid #d60000;padding:22px;border-radius:18px;position:relative;z-index:5;">
+<div class="time">17:00</div>
 
-<h2 style="color:#b30000;font-size:26px;margin-bottom:12px;">
+<div class="info">
 
-⏰ توجه مهم
+<h4>متولدین ۹۵</h4>
 
-</h2>
-
-<p style="font-size:17px;line-height:2;color:#444;">
-
-لطفاً تمامی بازیکنان حداقل <strong>۱۵ دقیقه قبل از شروع تمرین</strong>
-در محل برگزاری حضور داشته باشند تا هماهنگی‌های لازم انجام شود.
-
-</p>
+<p>۱۷:۰۰ تا ۱۸:۳۰</p>
 
 </div>
 
-<!-- ===========================
-کادر فنی
-=========================== -->
-
-<div style="margin-top:40px;position:relative;z-index:5;">
-
-<h2 style="text-align:center;color:#fff;font-size:34px;margin-bottom:30px;">
-
-👨‍🏫 مدیریت و کادر فنی
-
-</h2>
-
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
-
-<div style="background:#fff;border-radius:20px;padding:28px;text-align:center;box-shadow:0 15px 30px rgba(0,0,0,.10);">
-
-<i class="ri-user-star-fill" style="font-size:45px;color:#b30000;"></i>
-
-<h3 style="margin:15px 0 10px;font-size:22px;color:#222;">
-
-صادق اساسی
-
-</h3>
-
-<p style="color:#666;line-height:2;">
-
-مدیرعامل باشگاه
-
-</p>
-
 </div>
 
-<div style="background:#fff;border-radius:20px;padding:28px;text-align:center;box-shadow:0 15px 30px rgba(0,0,0,.10);">
+<div class="item">
 
-<i class="ri-football-fill" style="font-size:45px;color:#b30000;"></i>
+<div class="time">18:30</div>
 
-<h3 style="margin:15px 0;font-size:22px;color:#222;">
+<div class="info">
 
-محمدرضا بهراد
+<h4>متولدین ۹۷ و ۹۸</h4>
 
-</h3>
-
-<p style="color:#666;">سرمربی</p>
-
-</div>
-
-<div style="background:#fff;border-radius:20px;padding:28px;text-align:center;box-shadow:0 15px 30px rgba(0,0,0,.10);">
-
-<i class="ri-football-fill" style="font-size:45px;color:#b30000;"></i>
-
-<h3 style="margin:15px 0;font-size:22px;color:#222;">
-
-علی حجامی
-
-</h3>
-
-<p style="color:#666;">سرمربی</p>
-
-</div>
-
-<div style="background:#fff;border-radius:20px;padding:28px;text-align:center;box-shadow:0 15px 30px rgba(0,0,0,.10);">
-
-<i class="ri-football-fill" style="font-size:45px;color:#b30000;"></i>
-
-<h3 style="margin:15px 0;font-size:22px;color:#222;">
-
-حسین نظری
-
-</h3>
-
-<p style="color:#666;">سرمربی</p>
-
-</div>
-
-<div style="background:#fff;border-radius:20px;padding:28px;text-align:center;box-shadow:0 15px 30px rgba(0,0,0,.10);">
-
-<i class="ri-football-fill" style="font-size:45px;color:#b30000;"></i>
-
-<h3 style="margin:15px 0;font-size:22px;color:#222;">
-
-حسین صادقی
-
-</h3>
-
-<p style="color:#666;">سرمربی</p>
+<p>۱۸:۳۰ تا ۲۰:۰۰</p>
 
 </div>
 
@@ -861,25 +1136,689 @@ font-size:14px;
 
 </div>
 
-<!-- ===========================
-فوتر
-=========================== -->
+<div class="day">
 
-<div style="margin-top:45px;padding:25px;border-radius:20px;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);text-align:center;color:#fff;position:relative;z-index:5;">
+<div class="day-top">
 
-<h2 style="font-size:28px;margin-bottom:12px;">
+<h3>دوشنبه</h3>
 
-⚽ باشگاه فوتبال
+<span>تمرینات عصر</span>
 
-</h2>
+</div>
 
-<p style="font-size:16px;line-height:2;max-width:850px;margin:auto;">
+<div class="item">
 
-برای اطلاع از آخرین اخبار، تغییرات برنامه تمرینی و اطلاعیه‌های باشگاه، اطلاع‌رسانی‌های رسمی باشگاه را دنبال کنید.
-برای همه ورزشکاران عزیز آرزوی موفقیت و سلامتی داریم.
+<div class="time">16:00</div>
 
-</p>
+<div class="info">
+
+<h4>متولدین ۹۲</h4>
+
+<p>۱۶:۰۰ تا ۱۷:۳۰</p>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="time">17:30</div>
+
+<div class="info">
+
+<h4>متولدین ۹۶</h4>
+
+<p>۱۷:۳۰ تا ۱۹:۰۰</p>
+
+</div>
+
+</div>
+
+<div class="item">
+
+<div class="time">19:00</div>
+
+<div class="info">
+
+<h4>متولدین ۹۳</h4>
+
+<p>۱۹:۰۰ تا ۲۰:۳۰</p>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
+
+<!-- رده های سنی -->
+
+<div class="section-title">
+
+<h2>رده‌های سنی باشگاه</h2>
+
+<p>پذیرش بازیکنان در تمامی گروه‌های سنی</p>
+
+</div>
+
+<section class="groups">
+
+<div class="group">
+<i class="ri-team-fill"></i>
+<h3>نونهالان</h3>
+<p>متولدین ۹۷ و ۹۸</p>
+</div>
+
+<div class="group">
+<i class="ri-football-fill"></i>
+<h3>نوجوانان</h3>
+<p>متولدین ۹۵ و ۹۶</p>
+</div>
+
+<div class="group">
+<i class="ri-medal-fill"></i>
+<h3>جوانان</h3>
+<p>متولدین ۹۲ تا ۹۴</p>
+</div>
+
+<div class="group">
+<i class="ri-award-fill"></i>
+<h3>امید</h3>
+<p>متولدین ۹۰ و ۹۱</p>
+</div>
+
+</section>
+<!-- =====================================================
+PART 3 / 3
+NEWS + GALLERY + CONTACT + FOOTER
+====================================================== -->
+
+<style>
+
+/*==========================
+NEWS
+==========================*/
+
+.news-section{
+
+max-width:1400px;
+
+margin:90px auto;
+
+padding:0 20px;
+
+}
+
+.news-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:28px;
+
+}
+
+.news-card{
+
+background:#fff;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.news-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.news-image{
+
+height:220px;
+
+background:linear-gradient(135deg,#8b0000,#d60000);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:90px;
+
+color:#fff;
+
+}
+
+.news-content{
+
+padding:25px;
+
+}
+
+.news-content h3{
+
+font-size:23px;
+
+margin-bottom:12px;
+
+}
+
+.news-content p{
+
+color:#666;
+
+line-height:2;
+
+margin-bottom:20px;
+
+}
+
+.news-btn{
+
+display:inline-block;
+
+padding:12px 24px;
+
+background:#b30000;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+}
+
+/*==========================
+GALLERY
+==========================*/
+
+.gallery{
+
+max-width:1400px;
+
+margin:90px auto;
+
+padding:0 20px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+}
+
+.gallery div{
+
+height:230px;
+
+border-radius:20px;
+
+background:linear-gradient(135deg,#8b0000,#d60000);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:80px;
+
+color:#fff;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.gallery div:hover{
+
+transform:scale(1.05);
+
+}
+
+/*==========================
+CONTACT
+==========================*/
+
+.contact{
+
+max-width:1400px;
+
+margin:100px auto;
+
+padding:50px;
+
+border-radius:30px;
+
+background:linear-gradient(135deg,#8b0000,#d60000);
+
+color:#fff;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:40px;
+
+}
+
+.contact-box{
+
+display:flex;
+
+gap:20px;
+
+align-items:flex-start;
+
+}
+
+.contact-box i{
+
+font-size:40px;
+
+color:#ffd54f;
+
+}
+
+.contact-box h3{
+
+margin-bottom:10px;
+
+font-size:24px;
+
+}
+
+.contact-box p{
+
+line-height:2;
+
+}
+
+/*==========================
+FOOTER
+==========================*/
+
+.footer{
+
+margin-top:90px;
+
+background:#111;
+
+color:#fff;
+
+padding:70px 20px 30px;
+
+}
+
+.footer-grid{
+
+max-width:1400px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+}
+
+.footer h3{
+
+margin-bottom:18px;
+
+font-size:24px;
+
+color:#ffd54f;
+
+}
+
+.footer p{
+
+line-height:2;
+
+color:#ddd;
+
+}
+
+.footer a{
+
+display:block;
+
+color:#ddd;
+
+text-decoration:none;
+
+margin:10px 0;
+
+transition:.3s;
+
+}
+
+.footer a:hover{
+
+color:#ffd54f;
+
+padding-right:8px;
+
+}
+
+.social{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.social a{
+
+width:50px;
+
+height:50px;
+
+border-radius:50%;
+
+background:#b30000;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+color:#fff;
+
+}
+
+.copy{
+
+margin-top:50px;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+padding-top:25px;
+
+color:#bbb;
+
+font-size:14px;
+
+}
+
+.float-btn{
+
+position:fixed;
+
+bottom:25px;
+
+left:25px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:#d60000;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+font-size:30px;
+
+text-decoration:none;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+z-index:999;
+
+}
+
+</style>
+
+<div class="section-title">
+<h2>آخرین اخبار باشگاه</h2>
+<p>اطلاعیه‌ها و رویدادهای جدید</p>
+</div>
+
+<section class="news-section">
+
+<div class="news-grid">
+
+<div class="news-card">
+
+<div class="news-image">
+<i class="ri-football-fill"></i>
+</div>
+
+<div class="news-content">
+
+<h3>شروع ثبت‌نام ترم جدید</h3>
+
+<p>
+
+ثبت‌نام بازیکنان برای فصل جدید آغاز شده است.
+
+</p>
+
+<a href="#" class="news-btn">
+
+ادامه مطلب
+
+</a>
+
+</div>
+
+</div>
+
+<div class="news-card">
+
+<div class="news-image">
+<i class="ri-medal-fill"></i>
+</div>
+
+<div class="news-content">
+
+<h3>مسابقات پیش‌رو</h3>
+
+<p>
+
+اطلاعیه مسابقات و اردوهای باشگاه.
+
+</p>
+
+<a href="#" class="news-btn">
+
+ادامه مطلب
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="section-title">
+<h2>گالری تصاویر</h2>
+<p>تمرینات و مسابقات باشگاه</p>
+</div>
+
+<section class="gallery">
+
+<div><i class="ri-image-fill"></i></div>
+<div><i class="ri-image-fill"></i></div>
+<div><i class="ri-image-fill"></i></div>
+<div><i class="ri-image-fill"></i></div>
+
+</section>
+
+<section class="contact">
+
+<div class="contact-box">
+
+<i class="ri-map-pin-fill"></i>
+
+<div>
+
+<h3>آدرس</h3>
+
+<p>
+
+ورزشگاه ملت
+
+خیابان مطهری (بهداری)
+
+</p>
+
+</div>
+
+</div>
+
+<div class="contact-box">
+
+<i class="ri-phone-fill"></i>
+
+<div>
+
+<h3>تماس</h3>
+
+<p>
+
+۰۹۱۲xxxxxxx
+
+</p>
+
+</div>
+
+</div>
+
+<div class="contact-box">
+
+<i class="ri-time-fill"></i>
+
+<div>
+
+<h3>ساعات پاسخگویی</h3>
+
+<p>
+
+همه روزه
+
+۸ صبح تا ۸ شب
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>باشگاه ایساتیس</h3>
+
+<p>
+
+آکادمی تخصصی فوتبال برای تمامی رده‌های سنی با مربیان حرفه‌ای.
+
+</p>
+
+<div class="social">
+
+<a href="#"><i class="ri-instagram-line"></i></a>
+
+<a href="#"><i class="ri-telegram-line"></i></a>
+
+<a href="#"><i class="ri-whatsapp-line"></i></a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3>دسترسی سریع</h3>
+
+<a href="#">خانه</a>
+
+<a href="#">اخبار</a>
+
+<a href="#">تمرینات</a>
+
+<a href="#">ثبت‌نام</a>
+
+<a href="#">تماس</a>
+
+</div>
+
+<div>
+
+<h3>ارتباط با ما</h3>
+
+<p>
+
+ایمیل:
+info@isatisclub.ir
+
+</p>
+
+<p>
+
+تلفن:
+۰۹۱۲xxxxxxx
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copy">
+
+© تمامی حقوق این وب‌سایت متعلق به باشگاه فوتبال ایساتیس است.
+
+</div>
+
+</footer>
+
+<a class="float-btn" href="#">
+
+<i class="ri-arrow-up-line"></i>
+
+</a>
