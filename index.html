@@ -1,17 +1,225 @@
 <!-- =====================================================
-ISATIS FOOTBALL CLUB
-PREMIUM WEBSITE
-PART 1 / 3
-====================================================== -->
+ISATIS CLUB 2026
+PREMIUM VERSION
+PART 1 / 5
+===================================================== -->
 
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+direction:rtl;
+
+font-family:tahoma,sans-serif;
+
+background:#f5f5f5;
+
+overflow-x:hidden;
+
+}
+
+/********************
+HEADER
+********************/
+
+.isatis-header{
+
+position:fixed;
+
+top:0;
+
+right:0;
+
+width:100%;
+
+z-index:99999;
+
+background:rgba(120,0,0,.90);
+
+backdrop-filter:blur(18px);
+
+transition:.4s;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.header-container{
+
+max-width:1450px;
+
+margin:auto;
+
+padding:18px 30px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+text-decoration:none;
+
+color:#fff;
+
+}
+
+.logo-circle{
+
+width:62px;
+
+height:62px;
+
+border-radius:50%;
+
+background:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:32px;
+
+color:#b30000;
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.logo h2{
+
+font-size:27px;
+
+}
+
+.logo span{
+
+display:block;
+
+font-size:13px;
+
+opacity:.75;
+
+margin-top:5px;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:35px;
+
+align-items:center;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:#fff;
+
+font-weight:bold;
+
+font-size:15px;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+.menu a:after{
+
+content:"";
+
+position:absolute;
+
+bottom:-8px;
+
+right:0;
+
+width:0;
+
+height:3px;
+
+background:#FFD54F;
+
+transition:.35s;
+
+border-radius:20px;
+
+}
+
+.menu a:hover{
+
+color:#FFD54F;
+
+}
+
+.menu a:hover:after{
+
+width:100%;
+
+}
+
+.register-btn{
+
+padding:15px 28px;
+
+background:#FFD54F;
+
+border-radius:60px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+color:#8b0000;
+
+transition:.35s;
+
+}
+
+.register-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 18px 35px rgba(255,213,79,.35);
+
+}
+
+/********************
+Mobile
+********************/
+
 .mobile-toggle{
 
 display:none;
 
-font-size:34px;
+font-size:35px;
 
 color:#fff;
 
@@ -39,7 +247,7 @@ visibility:hidden;
 
 transition:.35s;
 
-z-index:9998;
+z-index:99998;
 
 }
 
@@ -59,19 +267,21 @@ top:0;
 
 right:-330px;
 
-width:300px;
+width:310px;
 
 height:100%;
 
 background:#8b0000;
 
+padding:30px;
+
 transition:.35s;
 
-z-index:9999;
-
-padding:25px;
+z-index:99999;
 
 overflow:auto;
+
+box-shadow:-10px 0 35px rgba(0,0,0,.3);
 
 }
 
@@ -89,7 +299,7 @@ justify-content:space-between;
 
 align-items:center;
 
-margin-bottom:30px;
+margin-bottom:35px;
 
 color:#fff;
 
@@ -97,7 +307,7 @@ color:#fff;
 
 .mobile-top h3{
 
-font-size:24px;
+font-size:26px;
 
 }
 
@@ -113,7 +323,7 @@ cursor:pointer;
 
 display:block;
 
-padding:18px 10px;
+padding:18px;
 
 text-decoration:none;
 
@@ -123,23 +333,25 @@ border-bottom:1px solid rgba(255,255,255,.1);
 
 font-size:17px;
 
+transition:.3s;
+
 }
 
 .mobile-menu a:hover{
 
-background:rgba(255,255,255,.08);
+padding-right:25px;
 
-padding-right:18px;
+background:rgba(255,255,255,.06);
 
 }
 
-.register-mobile{
+.mobile-register{
 
-margin-top:20px;
+margin-top:25px;
 
 background:#FFD54F;
 
-color:#8b0000 !important;
+color:#8b0000!important;
 
 text-align:center;
 
@@ -147,221 +359,81 @@ border-radius:12px;
 
 font-weight:bold;
 
-border:none !important;
-
-}
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-
-direction:rtl;
-
-font-family:tahoma,sans-serif;
-
-background:#fafafa;
-
-color:#222;
+border:none!important;
 
 }
 
-/*==========================
-HEADER
-==========================*/
-
-.isatis-header{
-
-position:fixed;
-
-top:0;
-
-right:0;
-
-width:100%;
-
-z-index:9999;
-
-background:rgba(120,0,0,.92);
-
-backdrop-filter:blur(18px);
-
-box-shadow:0 12px 30px rgba(0,0,0,.18);
-
-}
-
-.header-container{
-
-max-width:1400px;
-
-margin:auto;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:18px 25px;
-
-}
-
-.logo{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
-
-text-decoration:none;
-
-color:#fff;
-
-}
-
-.logo-circle{
-
-width:58px;
-
-height:58px;
-
-border-radius:50%;
-
-background:#fff;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-color:#b30000;
-
-font-size:28px;
-
-}
-
-.logo h2{
-
-font-size:25px;
-
-}
-
-.logo span{
-
-display:block;
-
-font-size:13px;
-
-opacity:.8;
-
-margin-top:4px;
-
-}
-
-.menu{
-
-display:flex;
-
-gap:30px;
-
-align-items:center;
-
-}
-
-.menu a{
-
-text-decoration:none;
-
-color:#fff;
-
-font-size:15px;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-.menu a:hover{
-
-color:#ffd54f;
-
-}
-
-.register-btn{
-
-background:#ffd54f;
-
-color:#7b0000;
-
-padding:14px 24px;
-
-border-radius:40px;
-
-font-weight:bold;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-.register-btn:hover{
-
-transform:translateY(-4px);
-
-}
-
-/*==========================
-HERO
-==========================*/
+/********************
+Hero
+********************/
 
 .hero{
 
-margin-top:92px;
+margin-top:95px;
 
 position:relative;
 
 overflow:hidden;
 
+padding:120px 40px;
+
 background:
 
-linear-gradient(135deg,#660000,#b30000,#d60000);
-
-padding:110px 40px;
+linear-gradient(135deg,#600000,#a00000,#cf0000);
 
 }
 
-.hero::before{
+.hero:before{
 
 content:"";
 
 position:absolute;
 
-width:650px;
+width:700px;
 
-height:650px;
+height:700px;
 
-background:#ff3b3b;
+border-radius:50%;
+
+background:#ff3535;
 
 filter:blur(180px);
 
 opacity:.18;
 
-top:-240px;
+left:-250px;
 
-left:-200px;
+top:-250px;
+
+}
+
+.hero:after{
+
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+background:#ffb300;
+
+filter:blur(170px);
+
+opacity:.08;
+
+right:-150px;
+
+bottom:-150px;
+
+border-radius:50%;
 
 }
 
 .hero-container{
 
-max-width:1400px;
+max-width:1450px;
 
 margin:auto;
 
@@ -369,7 +441,7 @@ display:grid;
 
 grid-template-columns:1.1fr .9fr;
 
-gap:60px;
+gap:70px;
 
 align-items:center;
 
@@ -381,11 +453,11 @@ z-index:2;
 
 .hero h1{
 
-font-size:58px;
-
-line-height:1.5;
+font-size:62px;
 
 color:#fff;
+
+line-height:1.45;
 
 margin-bottom:25px;
 
@@ -393,7 +465,7 @@ margin-bottom:25px;
 
 .hero h1 span{
 
-color:#ffd54f;
+color:#FFD54F;
 
 }
 
@@ -406,6 +478,8 @@ line-height:2.2;
 color:#f3f3f3;
 
 margin-bottom:35px;
+
+max-width:700px;
 
 }
 
@@ -421,31 +495,31 @@ flex-wrap:wrap;
 
 .hero-buttons a{
 
-padding:16px 28px;
+padding:17px 32px;
 
-border-radius:14px;
-
-text-decoration:none;
+border-radius:16px;
 
 font-weight:bold;
+
+text-decoration:none;
 
 transition:.35s;
 
 }
 
-.btn-red{
+.btn-gold{
+
+background:#FFD54F;
+
+color:#8b0000;
+
+}
+
+.btn-white{
 
 background:#fff;
 
 color:#b30000;
-
-}
-
-.btn-gold{
-
-background:#ffd54f;
-
-color:#7b0000;
 
 }
 
@@ -454,7 +528,6 @@ color:#7b0000;
 transform:translateY(-6px);
 
 }
-
 .hero-image{
 
 display:flex;
@@ -463,39 +536,245 @@ justify-content:center;
 
 align-items:center;
 
+position:relative;
+
 }
 
 .hero-image img{
 
-max-width:100%;
+width:100%;
 
-width:520px;
+max-width:620px;
 
-filter:drop-shadow(0 30px 40px rgba(0,0,0,.35));
+filter:drop-shadow(0 35px 50px rgba(0,0,0,.35));
 
-animation:float 5s infinite ease-in-out;
+animation:float 5s ease-in-out infinite;
+
+z-index:5;
+
+position:relative;
 
 }
 
 @keyframes float{
 
 0%{transform:translateY(0);}
-
 50%{transform:translateY(-18px);}
-
 100%{transform:translateY(0);}
 
 }
 
-/*==========================
-FEATURES
-==========================*/
+/******** Floating Cards ********/
 
-.features{
+.float-card{
 
-max-width:1400px;
+position:absolute;
 
-margin:-70px auto 60px;
+background:#fff;
+
+padding:18px 20px;
+
+border-radius:20px;
+
+box-shadow:0 18px 35px rgba(0,0,0,.15);
+
+display:flex;
+
+gap:12px;
+
+align-items:center;
+
+z-index:8;
+
+transition:.35s;
+
+}
+
+.float-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.float-card i{
+
+font-size:34px;
+
+color:#b30000;
+
+}
+
+.float-card b{
+
+display:block;
+
+font-size:22px;
+
+color:#b30000;
+
+}
+
+.float1{
+
+top:20px;
+
+right:0;
+
+}
+
+.float2{
+
+bottom:40px;
+
+left:0;
+
+}
+
+.float3{
+
+top:45%;
+
+left:-20px;
+
+}
+
+/*******************
+Hero Stats
+********************/
+
+.hero-stats{
+
+margin-top:70px;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:22px;
+
+}
+
+.stat{
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(15px);
+
+border-radius:24px;
+
+padding:30px;
+
+text-align:center;
+
+border:1px solid rgba(255,255,255,.12);
+
+transition:.35s;
+
+}
+
+.stat:hover{
+
+transform:translateY(-10px);
+
+background:rgba(255,255,255,.16);
+
+}
+
+.stat h2{
+
+font-size:42px;
+
+color:#FFD54F;
+
+margin-bottom:8px;
+
+}
+
+.stat p{
+
+color:#fff;
+
+font-size:15px;
+
+}
+
+/*******************
+Wave
+********************/
+
+.hero-wave{
+
+position:absolute;
+
+bottom:-8px;
+
+left:0;
+
+width:100%;
+
+line-height:0;
+
+}
+
+.hero-wave svg{
+
+display:block;
+
+width:100%;
+
+height:110px;
+
+}
+
+/*******************
+Section
+********************/
+
+.section{
+
+padding:90px 25px;
+
+}
+
+.container{
+
+max-width:1450px;
+
+margin:auto;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+font-size:46px;
+
+color:#9b0000;
+
+margin-bottom:15px;
+
+}
+
+.section-title p{
+
+font-size:18px;
+
+color:#666;
+
+}
+
+/*******************
+Features
+********************/
+
+.features-grid{
 
 display:grid;
 
@@ -503,21 +782,15 @@ grid-template-columns:repeat(4,1fr);
 
 gap:25px;
 
-position:relative;
-
-z-index:5;
-
-padding:0 20px;
-
 }
 
 .feature{
 
 background:#fff;
 
-border-radius:24px;
+border-radius:26px;
 
-padding:30px;
+padding:35px;
 
 text-align:center;
 
@@ -529,43 +802,43 @@ transition:.35s;
 
 .feature:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
 }
 
 .feature i{
 
-font-size:48px;
+font-size:55px;
 
 color:#b30000;
 
-margin-bottom:18px;
+margin-bottom:20px;
 
 }
 
 .feature h3{
 
-margin-bottom:12px;
+font-size:24px;
 
-font-size:22px;
+margin-bottom:15px;
 
 }
 
 .feature p{
 
-font-size:14px;
-
 line-height:2;
 
 color:#666;
 
+font-size:15px;
+
 }
 
-/*==========================
-RESPONSIVE
-==========================*/
+/*******************
+Responsive
+********************/
 
-@media(max-width:1100px){
+@media(max-width:1200px){
 
 .hero-container{
 
@@ -575,63 +848,39 @@ text-align:center;
 
 }
 
-.hero-image{
+.hero p{
 
-margin-top:35px;
+margin:auto auto 35px;
 
 }
 
-.features{
+.hero-image{
+
+margin-top:40px;
+
+}
+
+.hero-stats{
 
 grid-template-columns:repeat(2,1fr);
+
+}
+
+.features-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.mobile-toggle{
+
+display:block;
 
 }
 
 .menu{
 
 display:none;
-
-}
-
-}
-
-@media(max-width:768px){
-
-.hero{
-
-padding:80px 20px;
-
-}
-
-.hero h1{
-
-font-size:36px;
-
-}
-
-.hero p{
-
-font-size:15px;
-
-}
-
-.features{
-
-grid-template-columns:1fr;
-
-}
-
-.logo h2{
-
-font-size:20px;
-
-}
-
-.logo-circle{
-
-width:48px;
-
-height:48px;
 
 }
 
@@ -643,13 +892,127 @@ display:none;
 
 }
 
+@media(max-width:768px){
+
+.header-container{
+
+padding:15px 20px;
+
+}
+
+.logo h2{
+
+font-size:21px;
+
+}
+
+.logo-circle{
+
+width:50px;
+
+height:50px;
+
+font-size:24px;
+
+}
+
+.hero{
+
+padding:90px 20px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+line-height:2;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.hero-buttons a{
+
+text-align:center;
+
+}
+
+.hero-stats{
+
+grid-template-columns:1fr;
+
+}
+
+.features-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.float-card{
+
+display:none;
+
+}
+
+.section-title h2{
+
+font-size:32px;
+
+}
+
+}
+
 </style>
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<div class="mobile-top">
+
+<h3>باشگاه ایساتیس</h3>
+
+<i class="ri-close-line" onclick="toggleMenu()"></i>
+
+</div>
+
+<a href="#">خانه</a>
+
+<a href="#">برنامه تمرینات</a>
+
+<a href="#">اخبار</a>
+
+<a href="#">گالری</a>
+
+<a href="#">کادر فنی</a>
+
+<a href="#">تماس با ما</a>
+
+<a href="#" class="mobile-register">
+
+ثبت نام در باشگاه
+
+</a>
+
+</div>
 
 <header class="isatis-header">
 
 <div class="header-container">
 
-<a href="#" class="logo">
+<a class="logo" href="#">
 
 <div class="logo-circle">
 
@@ -671,7 +1034,7 @@ display:none;
 
 <a href="#">خانه</a>
 
-<a href="#">برنامه تمرینات</a>
+<a href="#">تمرینات</a>
 
 <a href="#">اخبار</a>
 
@@ -679,38 +1042,57 @@ display:none;
 
 <a href="#">کادر فنی</a>
 
-<a href="#">تماس با ما</a>
+<a href="#">تماس</a>
 
 </nav>
 
+<div class="mobile-toggle" onclick="toggleMenu()">
+
+<i class="ri-menu-3-line"></i>
+
+</div>
+
 <a href="#" class="register-btn">
 
-ثبت نام در باشگاه
+ثبت نام
 
 </a>
 
 </div>
 
 </header>
+<!-- =========================================
+PART 3 - HERO SECTION
+========================================= -->
 
 <section class="hero">
 
 <div class="hero-container">
 
-<div>
+<div class="hero-content">
+
+<div class="hero-badge">
+
+<i class="ri-award-fill"></i>
+
+آکادمی تخصصی فوتبال ایساتیس
+
+</div>
 
 <h1>
 
-آینده فوتبال را در
-<span>باشگاه ایساتیس</span>
+جایی که
 
-بسازید
+<span>قهرمانان آینده</span>
+
+متولد می‌شوند
 
 </h1>
 
 <p>
 
-آکادمی تخصصی فوتبال با مربیان مجرب، برنامه تمرینی استاندارد، زمین اختصاصی و محیطی حرفه‌ای برای رشد استعدادهای فوتبالی در تمامی رده‌های سنی.
+باشگاه فوتبال ایساتیس با بهره‌گیری از مربیان مجرب، برنامه تمرینی علمی و امکانات حرفه‌ای،
+مسیر رشد فوتبالیست‌های آینده را هموار کرده است.
 
 </p>
 
@@ -718,11 +1100,15 @@ display:none;
 
 <a href="#" class="btn-gold">
 
+<i class="ri-user-add-fill"></i>
+
 ثبت نام
 
 </a>
 
-<a href="#" class="btn-red">
+<a href="#" class="btn-white">
+
+<i class="ri-calendar-check-fill"></i>
 
 برنامه تمرینات
 
@@ -730,37 +1116,149 @@ display:none;
 
 </div>
 
+<div class="hero-stats">
+
+<div class="stat">
+
+<h2>+۴۵۰</h2>
+
+<p>بازیکن فعال</p>
+
+</div>
+
+<div class="stat">
+
+<h2>۱۲</h2>
+
+<p>مربی حرفه‌ای</p>
+
+</div>
+
+<div class="stat">
+
+<h2>۹۸٪</h2>
+
+<p>رضایت والدین</p>
+
+</div>
+
+<div class="stat">
+
+<h2>۱۵</h2>
+
+<p>سال تجربه</p>
+
+</div>
+
+</div>
+
 </div>
 
 <div class="hero-image">
 
-<img src="https://github.com/arianajafiaria-prog/arialap/blob/main/photo20902219403.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Soccerball.svg/512px-Soccerball.svg.png">
+
+<div class="float-card float1">
+
+<i class="ri-medal-fill"></i>
+
+<div>
+
+<b>۱۵ جام</b>
+
+قهرمانی
 
 </div>
+
+</div>
+
+<div class="float-card float2">
+
+<i class="ri-football-fill"></i>
+
+<div>
+
+<b>هر هفته</b>
+
+تمرین تخصصی
+
+</div>
+
+</div>
+
+<div class="float-card float3">
+
+<i class="ri-team-fill"></i>
+
+<div>
+
+<b>تمام رده‌ها</b>
+
+پذیرش بازیکن
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-wave">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+
+viewBox="0 0 1440 320">
+
+<path fill="#ffffff"
+
+d="M0,224L60,213.3C120,203,240,181,360,170.7C480,160,600,160,720,176C840,192,960,224,1080,224C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"/>
+
+</svg>
 
 </div>
 
 </section>
 
-<section class="features">
+<!-- ========= FEATURES ========= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+
+چرا باشگاه ایساتیس؟
+
+</h2>
+
+<p>
+
+محیطی حرفه‌ای برای رشد استعدادهای فوتبالی
+
+</p>
+
+</div>
+
+<div class="features-grid">
 
 <div class="feature">
 
 <i class="ri-football-fill"></i>
 
-<h3>تمرین حرفه‌ای</h3>
+<h3>
 
-<p>تمرینات تخصصی برای تمامی رده‌های سنی.</p>
+تمرینات حرفه‌ای
 
-</div>
+</h3>
 
-<div class="feature">
+<p>
 
-<i class="ri-award-fill"></i>
+برنامه‌های تمرینی علمی متناسب با هر رده سنی.
 
-<h3>مربیان مجرب</h3>
-
-<p>کادر فنی دارای تجربه و دانش روز فوتبال.</p>
+</p>
 
 </div>
 
@@ -768,81 +1266,95 @@ display:none;
 
 <i class="ri-team-fill"></i>
 
-<h3>رده‌های سنی</h3>
+<h3>
 
-<p>پذیرش بازیکنان در گروه‌های مختلف.</p>
+مربیان مجرب
+
+</h3>
+
+<p>
+
+دارای مدارک رسمی و سابقه فعالیت حرفه‌ای.
+
+</p>
 
 </div>
 
 <div class="feature">
 
-<i class="ri-medal-fill"></i>
+<i class="ri-award-fill"></i>
 
-<h3>مسابقات</h3>
+<h3>
 
-<p>حضور مستمر در لیگ‌ها و تورنمنت‌ها.</p>
+شرکت در مسابقات
+
+</h3>
+
+<p>
+
+حضور در لیگ‌ها، جشنواره‌ها و تورنمنت‌های معتبر.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<i class="ri-heart-pulse-fill"></i>
+
+<h3>
+
+سلامت و آمادگی
+
+</h3>
+
+<p>
+
+توجه ویژه به سلامت جسمی و روحی بازیکنان.
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
-<!-- =====================================================
-PART 2 / 3
-TIMETABLE + TEAMS + COACHES
-====================================================== -->
+<!-- =========================================
+PART 4 / 5
+TRAINING SCHEDULE + COACHES
+========================================= -->
 
 <style>
 
-.section-title{
+/***************
+Training
+****************/
 
-text-align:center;
+.training-section{
 
-margin:80px 0 45px;
+padding:90px 25px;
 
-}
-
-.section-title h2{
-
-font-size:42px;
-
-color:#9b0000;
-
-margin-bottom:12px;
-
-}
-
-.section-title p{
-
-font-size:17px;
-
-color:#666;
-
-}
-
-/*==========================
-TIMELINE
-==========================*/
-
-.training{
-
-max-width:1400px;
-
-margin:auto;
-
-padding:0 20px;
+background:#fafafa;
 
 }
 
 .training-grid{
 
+max-width:1450px;
+
+margin:auto;
+
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
 
 gap:30px;
 
 }
 
-.day{
+.training-card{
 
 background:#fff;
 
@@ -850,207 +1362,93 @@ border-radius:28px;
 
 overflow:hidden;
 
-box-shadow:0 18px 35px rgba(0,0,0,.08);
-
-transition:.35s;
-
-}
-
-.day:hover{
-
-transform:translateY(-10px);
-
-}
-
-.day-top{
-
-background:linear-gradient(135deg,#8b0000,#d60000);
-
-padding:22px;
-
-color:#fff;
-
-text-align:center;
-
-}
-
-.day-top h3{
-
-font-size:30px;
-
-}
-
-.day-top span{
-
-opacity:.9;
-
-font-size:14px;
-
-}
-
-.item{
-
-display:flex;
-
-gap:15px;
-
-padding:18px 22px;
-
-border-bottom:1px solid #eee;
-
-align-items:center;
-
-}
-
-.item:last-child{
-
-border:none;
-
-}
-
-.time{
-
-width:95px;
-
-height:95px;
-
-border-radius:18px;
-
-background:#f6f6f6;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-weight:bold;
-
-color:#b30000;
-
-font-size:18px;
-
-}
-
-.info h4{
-
-font-size:20px;
-
-margin-bottom:8px;
-
-}
-
-.info p{
-
-font-size:14px;
-
-color:#666;
-
-line-height:1.9;
-
-}
-
-/*==========================
-AGE GROUPS
-==========================*/
-
-.groups{
-
-max-width:1400px;
-
-margin:90px auto;
-
-padding:0 20px;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-
-gap:25px;
-
-}
-
-.group{
-
-background:#fff;
-
-padding:35px;
-
-border-radius:24px;
-
-text-align:center;
-
 box-shadow:0 15px 35px rgba(0,0,0,.08);
 
 transition:.35s;
 
 }
 
-.group:hover{
+.training-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
-background:#9b0000;
+}
+
+.training-header{
+
+background:linear-gradient(135deg,#8b0000,#d60000);
+
+padding:25px;
 
 color:#fff;
 
-}
-
-.group:hover p{
-
-color:#f5f5f5;
+text-align:center;
 
 }
 
-.group i{
+.training-header h3{
 
-font-size:55px;
-
-color:#d60000;
-
-margin-bottom:18px;
+font-size:30px;
 
 }
 
-.group:hover i{
+.training-item{
 
-color:#ffd54f;
+padding:18px 22px;
 
-}
+display:flex;
 
-.group h3{
+justify-content:space-between;
 
-font-size:24px;
+align-items:center;
 
-margin-bottom:12px;
-
-}
-
-.group p{
-
-color:#666;
-
-line-height:2;
+border-bottom:1px solid #eee;
 
 }
 
-/*==========================
-COACHES
-==========================*/
+.training-item:last-child{
+
+border:none;
+
+}
+
+.training-item span{
+
+font-weight:bold;
+
+color:#b30000;
+
+}
+
+.training-item b{
+
+font-size:15px;
+
+}
+
+/***************
+Coaches
+****************/
 
 .coaches{
 
-max-width:1400px;
+padding:100px 25px;
+
+background:#fff;
+
+}
+
+.coach-grid{
+
+max-width:1450px;
 
 margin:auto;
 
-padding:20px;
-
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-gap:28px;
+gap:30px;
 
 }
 
@@ -1058,25 +1456,23 @@ gap:28px;
 
 background:#fff;
 
-border-radius:26px;
+border-radius:30px;
 
 overflow:hidden;
 
-box-shadow:0 18px 40px rgba(0,0,0,.08);
+box-shadow:0 20px 45px rgba(0,0,0,.08);
 
 transition:.35s;
-
-text-align:center;
 
 }
 
 .coach:hover{
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
 }
 
-.coach-photo{
+.coach-top{
 
 height:230px;
 
@@ -1090,7 +1486,7 @@ align-items:center;
 
 }
 
-.coach-photo i{
+.coach-top i{
 
 font-size:90px;
 
@@ -1100,13 +1496,15 @@ color:#fff;
 
 .coach-content{
 
-padding:28px;
+padding:30px;
+
+text-align:center;
 
 }
 
 .coach-content h3{
 
-font-size:24px;
+font-size:26px;
 
 margin-bottom:10px;
 
@@ -1116,798 +1514,359 @@ margin-bottom:10px;
 
 display:inline-block;
 
-background:#ffe7e7;
-
 padding:8px 18px;
 
-border-radius:30px;
+background:#ffe8e8;
 
 color:#b30000;
-
-font-weight:bold;
-
-margin-bottom:15px;
-
-}
-
-.coach-content p{
-
-font-size:14px;
-
-line-height:2;
-
-color:#666;
-
-}
-
-/*==========================
-STATS
-==========================*/
-
-.stats{
-
-margin:90px auto;
-
-max-width:1400px;
-
-padding:25px;
-
-display:grid;
-
-grid-template-columns:repeat(4,1fr);
-
-gap:25px;
-
-}
-
-.stat{
-
-background:linear-gradient(135deg,#8b0000,#d60000);
-
-border-radius:24px;
-
-padding:40px;
-
-text-align:center;
-
-color:#fff;
-
-}
-
-.stat h2{
-
-font-size:46px;
-
-margin-bottom:10px;
-
-}
-
-.stat p{
-
-font-size:17px;
-
-}
-
-@media(max-width:900px){
-
-.stats{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-@media(max-width:700px){
-
-.stats{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
-
-<!-- برنامه تمرین -->
-
-<div class="section-title">
-
-<h2>برنامه هفتگی تمرینات</h2>
-
-<p>زمان‌بندی کامل جلسات تمرینی باشگاه ایساتیس</p>
-
-</div>
-
-<section class="training">
-
-<div class="training-grid">
-
-<div class="day">
-
-<div class="day-top">
-
-<h3>شنبه</h3>
-
-<span>تمرینات عصر</span>
-
-</div>
-
-<div class="item">
-
-<div class="time">15:30</div>
-
-<div class="info">
-
-<h4>متولدین ۹۰</h4>
-
-<p>۱۵:۳۰ تا ۱۷:۰۰</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="time">17:00</div>
-
-<div class="info">
-
-<h4>متولدین ۹۵</h4>
-
-<p>۱۷:۰۰ تا ۱۸:۳۰</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="time">18:30</div>
-
-<div class="info">
-
-<h4>متولدین ۹۷ و ۹۸</h4>
-
-<p>۱۸:۳۰ تا ۲۰:۰۰</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="day">
-
-<div class="day-top">
-
-<h3>دوشنبه</h3>
-
-<span>تمرینات عصر</span>
-
-</div>
-
-<div class="item">
-
-<div class="time">16:00</div>
-
-<div class="info">
-
-<h4>متولدین ۹۲</h4>
-
-<p>۱۶:۰۰ تا ۱۷:۳۰</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="time">17:30</div>
-
-<div class="info">
-
-<h4>متولدین ۹۶</h4>
-
-<p>۱۷:۳۰ تا ۱۹:۰۰</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="time">19:00</div>
-
-<div class="info">
-
-<h4>متولدین ۹۳</h4>
-
-<p>۱۹:۰۰ تا ۲۰:۳۰</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- رده های سنی -->
-
-<div class="section-title">
-
-<h2>رده‌های سنی باشگاه</h2>
-
-<p>پذیرش بازیکنان در تمامی گروه‌های سنی</p>
-
-</div>
-
-<section class="groups">
-
-<div class="group">
-<i class="ri-team-fill"></i>
-<h3>نونهالان</h3>
-<p>متولدین ۹۷ و ۹۸</p>
-</div>
-
-<div class="group">
-<i class="ri-football-fill"></i>
-<h3>نوجوانان</h3>
-<p>متولدین ۹۵ و ۹۶</p>
-</div>
-
-<div class="group">
-<i class="ri-medal-fill"></i>
-<h3>جوانان</h3>
-<p>متولدین ۹۲ تا ۹۴</p>
-</div>
-
-<div class="group">
-<i class="ri-award-fill"></i>
-<h3>امید</h3>
-<p>متولدین ۹۰ و ۹۱</p>
-</div>
-
-</section>
-<!-- =====================================================
-PART 3 / 3
-NEWS + GALLERY + CONTACT + FOOTER
-====================================================== -->
-
-<style>
-
-/*==========================
-NEWS
-==========================*/
-
-.news-section{
-
-max-width:1400px;
-
-margin:90px auto;
-
-padding:0 20px;
-
-}
-
-.news-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:28px;
-
-}
-
-.news-card{
-
-background:#fff;
-
-border-radius:25px;
-
-overflow:hidden;
-
-box-shadow:0 18px 40px rgba(0,0,0,.08);
-
-transition:.35s;
-
-}
-
-.news-card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.news-image{
-
-height:220px;
-
-background:linear-gradient(135deg,#8b0000,#d60000);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:90px;
-
-color:#fff;
-
-}
-
-.news-content{
-
-padding:25px;
-
-}
-
-.news-content h3{
-
-font-size:23px;
-
-margin-bottom:12px;
-
-}
-
-.news-content p{
-
-color:#666;
-
-line-height:2;
-
-margin-bottom:20px;
-
-}
-
-.news-btn{
-
-display:inline-block;
-
-padding:12px 24px;
-
-background:#b30000;
-
-color:#fff;
-
-text-decoration:none;
 
 border-radius:40px;
 
 font-weight:bold;
 
-}
-
-/*==========================
-GALLERY
-==========================*/
-
-.gallery{
-
-max-width:1400px;
-
-margin:90px auto;
-
-padding:0 20px;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:20px;
-
-}
-
-.gallery div{
-
-height:230px;
-
-border-radius:20px;
-
-background:linear-gradient(135deg,#8b0000,#d60000);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:80px;
-
-color:#fff;
-
-transition:.35s;
-
-cursor:pointer;
-
-}
-
-.gallery div:hover{
-
-transform:scale(1.05);
-
-}
-
-/*==========================
-CONTACT
-==========================*/
-
-.contact{
-
-max-width:1400px;
-
-margin:100px auto;
-
-padding:50px;
-
-border-radius:30px;
-
-background:linear-gradient(135deg,#8b0000,#d60000);
-
-color:#fff;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:40px;
-
-}
-
-.contact-box{
-
-display:flex;
-
-gap:20px;
-
-align-items:flex-start;
-
-}
-
-.contact-box i{
-
-font-size:40px;
-
-color:#ffd54f;
-
-}
-
-.contact-box h3{
-
-margin-bottom:10px;
-
-font-size:24px;
-
-}
-
-.contact-box p{
-
-line-height:2;
-
-}
-
-/*==========================
-FOOTER
-==========================*/
-
-.footer{
-
-margin-top:90px;
-
-background:#111;
-
-color:#fff;
-
-padding:70px 20px 30px;
-
-}
-
-.footer-grid{
-
-max-width:1400px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:35px;
-
-}
-
-.footer h3{
-
 margin-bottom:18px;
 
-font-size:24px;
-
-color:#ffd54f;
-
 }
 
-.footer p{
+.coach-content p{
 
 line-height:2;
 
-color:#ddd;
+color:#666;
 
 }
 
-.footer a{
+/***************
+Responsive
+****************/
 
-display:block;
+@media(max-width:768px){
 
-color:#ddd;
+.training-section{
 
-text-decoration:none;
-
-margin:10px 0;
-
-transition:.3s;
+padding:60px 15px;
 
 }
 
-.footer a:hover{
+.coaches{
 
-color:#ffd54f;
-
-padding-right:8px;
+padding:60px 15px;
 
 }
 
-.social{
-
-display:flex;
-
-gap:15px;
-
-margin-top:20px;
-
-}
-
-.social a{
-
-width:50px;
-
-height:50px;
-
-border-radius:50%;
-
-background:#b30000;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
+.training-header h3{
 
 font-size:24px;
 
-color:#fff;
-
 }
-
-.copy{
-
-margin-top:50px;
-
-text-align:center;
-
-border-top:1px solid rgba(255,255,255,.1);
-
-padding-top:25px;
-
-color:#bbb;
-
-font-size:14px;
-
-}
-
-.float-btn{
-
-position:fixed;
-
-bottom:25px;
-
-left:25px;
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-background:#d60000;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-color:#fff;
-
-font-size:30px;
-
-text-decoration:none;
-
-box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-z-index:999;
 
 }
 
 </style>
 
-<div class="section-title">
-<h2>آخرین اخبار باشگاه</h2>
-<p>اطلاعیه‌ها و رویدادهای جدید</p>
-</div>
+<!-- ======================= -->
 
-<section class="news-section">
-
-<div class="news-grid">
-
-<div class="news-card">
-
-<div class="news-image">
-<i class="ri-football-fill"></i>
-</div>
-
-<div class="news-content">
-
-<h3>شروع ثبت‌نام ترم جدید</h3>
-
-<p>
-
-ثبت‌نام بازیکنان برای فصل جدید آغاز شده است.
-
-</p>
-
-<a href="#" class="news-btn">
-
-ادامه مطلب
-
-</a>
-
-</div>
-
-</div>
-
-<div class="news-card">
-
-<div class="news-image">
-<i class="ri-medal-fill"></i>
-</div>
-
-<div class="news-content">
-
-<h3>مسابقات پیش‌رو</h3>
-
-<p>
-
-اطلاعیه مسابقات و اردوهای باشگاه.
-
-</p>
-
-<a href="#" class="news-btn">
-
-ادامه مطلب
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+<section class="training-section">
 
 <div class="section-title">
-<h2>گالری تصاویر</h2>
-<p>تمرینات و مسابقات باشگاه</p>
+
+<h2>برنامه هفتگی تمرینات</h2>
+
+<p>برنامه جدید تیر، مرداد و شهریور</p>
+
 </div>
 
-<section class="gallery">
+<div class="training-grid">
 
-<div><i class="ri-image-fill"></i></div>
-<div><i class="ri-image-fill"></i></div>
-<div><i class="ri-image-fill"></i></div>
-<div><i class="ri-image-fill"></i></div>
+<div class="training-card">
+
+<div class="training-header">
+
+<h3>شنبه</h3>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۵:۳۰ تا ۱۷</b>
+
+<span>متولدین ۹۰</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۷ تا ۱۸:۳۰</b>
+
+<span>متولدین ۹۵</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۸:۳۰ تا ۲۰</b>
+
+<span>متولدین ۹۷ و ۹۸</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۲۰ تا ۲۱:۳۰</b>
+
+<span>متولدین ۹۶</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۲۱:۳۰ تا ۲۳</b>
+
+<span>متولدین ۹۳</span>
+
+</div>
+
+</div>
+
+<div class="training-card">
+
+<div class="training-header">
+
+<h3>دوشنبه</h3>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۶ تا ۱۷:۳۰</b>
+
+<span>متولدین ۹۲</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۷:۳۰ تا ۱۹</b>
+
+<span>متولدین ۹۶</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۹ تا ۲۰:۳۰</b>
+
+<span>متولدین ۹۳</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۲۰:۳۰ تا ۲۲</b>
+
+<span>متولدین ۹۴</span>
+
+</div>
+
+</div>
+
+<div class="training-card">
+
+<div class="training-header">
+
+<h3>چهارشنبه</h3>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۶ تا ۱۷:۳۰</b>
+
+<span>متولدین ۹۱</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۷:۳۰ تا ۱۹</b>
+
+<span>متولدین ۹۵</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۱۹ تا ۲۰:۳۰</b>
+
+<span>متولدین ۹۷ و ۹۸</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۲۰:۳۰ تا ۲۲</b>
+
+<span>متولدین ۹۴</span>
+
+</div>
+
+</div>
+
+<div class="training-card">
+
+<div class="training-header">
+
+<h3>پنجشنبه</h3>
+
+</div>
+
+<div class="training-item">
+
+<b>۹ تا ۱۱</b>
+
+<span>متولدین ۹۲</span>
+
+</div>
+
+<div class="training-item">
+
+<b>۹ تا ۱۱</b>
+
+<span>متولدین ۹۰ (چمن بزرگ)</span>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-<section class="contact">
+<section class="coaches">
 
-<div class="contact-box">
+<div class="section-title">
 
-<i class="ri-map-pin-fill"></i>
+<h2>کادر فنی باشگاه</h2>
 
-<div>
+<p>تیمی از مربیان حرفه‌ای فوتبال</p>
 
-<h3>آدرس</h3>
+</div>
 
-<p>
+<div class="coach-grid">
 
-ورزشگاه ملت
+<div class="coach">
 
-خیابان مطهری (بهداری)
+<div class="coach-top">
 
-</p>
+<i class="ri-user-star-fill"></i>
+
+</div>
+
+<div class="coach-content">
+
+<h3>صادق اساسی</h3>
+
+<span>مدیرعامل باشگاه</span>
+
+<p>مدیریت و برنامه‌ریزی مجموعه باشگاه فوتبال ایساتیس.</p>
 
 </div>
 
 </div>
 
-<div class="contact-box">
+<div class="coach">
 
-<i class="ri-phone-fill"></i>
+<div class="coach-top">
 
-<div>
+<i class="ri-user-3-fill"></i>
 
-<h3>تماس</h3>
+</div>
 
-<p>
+<div class="coach-content">
 
-۰۹۱۲xxxxxxx
+<h3>محمدرضا بهراد</h3>
 
-</p>
+<span>سرمربی</span>
+
+<p>برنامه‌های تمرینی و آماده‌سازی تیم.</p>
 
 </div>
 
 </div>
 
-<div class="contact-box">
+<div class="coach">
 
-<i class="ri-time-fill"></i>
+<div class="coach-top">
 
-<div>
+<i class="ri-user-3-fill"></i>
 
-<h3>ساعات پاسخگویی</h3>
+</div>
 
-<p>
+<div class="coach-content">
 
-همه روزه
+<h3>علی حجامی</h3>
 
-۸ صبح تا ۸ شب
+<span>مربی</span>
 
-</p>
+<p>آموزش تکنیک، تاکتیک و رشد استعدادها.</p>
+
+</div>
+
+</div>
+
+<div class="coach">
+
+<div class="coach-top">
+
+<i class="ri-user-3-fill"></i>
+
+</div>
+
+<div class="coach-content">
+
+<h3>حسین نظری و حسین صادقی</h3>
+
+<span>مربیان باشگاه</span>
+
+<p>تمرینات تخصصی تمامی رده‌های سنی.</p>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
+<!-- =====================================================
+PART 5 / 5
+FOOTER + MOBILE MENU + ANIMATIONS
+===================================================== -->
 
 <footer class="footer">
+
+<div class="container">
 
 <div class="footer-grid">
 
 <div>
 
-<h3>باشگاه ایساتیس</h3>
+<h3>باشگاه فوتبال ایساتیس</h3>
 
 <p>
 
-آکادمی تخصصی فوتبال برای تمامی رده‌های سنی با مربیان حرفه‌ای.
+آکادمی تخصصی فوتبال با هدف پرورش استعدادهای فوتبالی، آموزش اصولی، ایجاد محیطی حرفه‌ای و حضور در مسابقات استانی و کشوری.
 
 </p>
 
-<div class="social">
+<div class="footer-social">
 
 <a href="#"><i class="ri-instagram-line"></i></a>
 
 <a href="#"><i class="ri-telegram-line"></i></a>
 
 <a href="#"><i class="ri-whatsapp-line"></i></a>
+
+<a href="#"><i class="ri-youtube-line"></i></a>
 
 </div>
 
@@ -1919,48 +1878,378 @@ z-index:999;
 
 <a href="#">خانه</a>
 
+<a href="#">برنامه تمرینات</a>
+
 <a href="#">اخبار</a>
 
-<a href="#">تمرینات</a>
+<a href="#">گالری تصاویر</a>
 
-<a href="#">ثبت‌نام</a>
+<a href="#">کادر فنی</a>
 
-<a href="#">تماس</a>
+<a href="#">تماس با ما</a>
 
 </div>
 
 <div>
 
-<h3>ارتباط با ما</h3>
+<h3>اطلاعات تماس</h3>
 
-<p>
+<p>📍 ورزشگاه ملت</p>
 
-ایمیل:
-info@isatisclub.ir
+<p>خیابان مطهری (بهداری)</p>
 
-</p>
+<p>📞 0912xxxxxxx</p>
 
-<p>
-
-تلفن:
-۰۹۱۲xxxxxxx
-
-</p>
+<p>🕒 همه روزه 8 الی 20</p>
 
 </div>
 
 </div>
 
-<div class="copy">
+<div class="copyright">
 
-© تمامی حقوق این وب‌سایت متعلق به باشگاه فوتبال ایساتیس است.
+© تمامی حقوق این وب سایت متعلق به باشگاه فوتبال ایساتیس می‌باشد.
+
+</div>
 
 </div>
 
 </footer>
 
-<a class="float-btn" href="#">
+<a class="scrollTop" id="scrollTop">
 
 <i class="ri-arrow-up-line"></i>
 
 </a>
+
+<style>
+
+/**************** FOOTER ****************/
+
+.footer{
+
+background:#111;
+
+color:#fff;
+
+padding:90px 25px 30px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:45px;
+
+}
+
+.footer h3{
+
+color:#FFD54F;
+
+margin-bottom:20px;
+
+font-size:25px;
+
+}
+
+.footer p{
+
+line-height:2.1;
+
+color:#ddd;
+
+margin-bottom:10px;
+
+}
+
+.footer a{
+
+display:block;
+
+color:#ddd;
+
+text-decoration:none;
+
+margin:12px 0;
+
+transition:.35s;
+
+}
+
+.footer a:hover{
+
+padding-right:10px;
+
+color:#FFD54F;
+
+}
+
+.footer-social{
+
+display:flex;
+
+gap:15px;
+
+margin-top:25px;
+
+}
+
+.footer-social a{
+
+width:52px;
+
+height:52px;
+
+background:#b30000;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:23px;
+
+transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+transform:translateY(-8px) rotate(360deg);
+
+background:#FFD54F;
+
+color:#900;
+
+}
+
+.copyright{
+
+border-top:1px solid rgba(255,255,255,.1);
+
+margin-top:55px;
+
+padding-top:30px;
+
+text-align:center;
+
+color:#999;
+
+font-size:14px;
+
+}
+
+/**************** SCROLL TOP ****************/
+
+.scrollTop{
+
+position:fixed;
+
+bottom:25px;
+
+left:25px;
+
+width:65px;
+
+height:65px;
+
+background:#b30000;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+color:#fff;
+
+cursor:pointer;
+
+box-shadow:0 18px 35px rgba(0,0,0,.25);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:99999;
+
+}
+
+.scrollTop.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.scrollTop:hover{
+
+transform:translateY(-8px);
+
+background:#d10000;
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+padding:60px 20px 20px;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.footer-social{
+
+justify-content:center;
+
+}
+
+.scrollTop{
+
+width:58px;
+
+height:58px;
+
+font-size:25px;
+
+bottom:18px;
+
+left:18px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+/******** Mobile Menu ********/
+
+function toggleMenu(){
+
+document.getElementById("mobileMenu").classList.toggle("active");
+
+document.getElementById("overlay").classList.toggle("active");
+
+}
+
+/******** Scroll Top ********/
+
+const btn=document.getElementById("scrollTop");
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>300){
+
+btn.classList.add("show");
+
+}else{
+
+btn.classList.remove("show");
+
+}
+
+});
+
+btn.onclick=function(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+/******** Header Effect ********/
+
+window.addEventListener("scroll",function(){
+
+const h=document.querySelector(".isatis-header");
+
+if(window.scrollY>80){
+
+h.style.background="rgba(90,0,0,.97)";
+
+h.style.padding="0";
+
+}else{
+
+h.style.background="rgba(120,0,0,.90)";
+
+}
+
+});
+
+/******** Fade Animation ********/
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{
+
+opacity:0,
+
+transform:"translateY(50px)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translateY(0)"
+
+}
+
+],{
+
+duration:800,
+
+fill:"forwards"
+
+});
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section,.feature,.news-card,.coach,.gallery div,.stat").forEach(el=>{
+
+observer.observe(el);
+
+});
+
+</script>
